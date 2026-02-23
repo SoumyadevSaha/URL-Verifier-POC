@@ -1,0 +1,29 @@
+<!-- backend/app/templates/index.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>URL Sandbox POC - Jobs</title>
+  <script src="/static/ui.js"></script>
+  <style>
+    body{font-family:sans-serif;margin:20px}
+    .job{border:1px solid #ddd;padding:12px;margin-bottom:8px;border-radius:6px}
+    .small{font-size:0.9em;color:#666}
+    #newForm{margin-bottom:20px}
+  </style>
+</head>
+<body>
+  <h2>URL Sandbox POC — Local</h2>
+  <div id="newForm">
+    <input id="urlInput" type="text" placeholder="https://example.com" size="60"/>
+    <button onclick="createJob()">Analyze</button>
+    <span id="msg" class="small"></span>
+  </div>
+
+  <div id="jobs"></div>
+  <script>
+    refreshJobs();
+    setInterval(refreshJobs, 3000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+sqlmodel
+docker
+python-whois
+Jinja2
